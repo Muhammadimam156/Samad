@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe6ef">
+<title>A Little Note for Mehwish 💗</title>
+<style>
+:root{--pink:#ff5f91;--deep:#b82961;--ink:#54243a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:linear-gradient(135deg,#ffe1ec,#fff4f7 48%,#ffd7e6);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
+.card{width:min(100%,590px);text-align:center;padding:clamp(26px,6vw,48px);background:#ffffffdc;border:1px solid white;border-radius:30px;box-shadow:0 22px 70px #b8296129}
+.heart{font-size:44px;animation:beat 1.5s infinite}
+.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:800;color:#c45a80}
+h1{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.1rem);line-height:1.12;margin:12px 0;color:var(--deep)}
+p{font-size:1.04rem;line-height:1.85}
+.note{background:#fff4f8;border-radius:18px;padding:17px 20px;margin:24px 0;font-family:Georgia,serif;font-size:1.08rem;line-height:1.7}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+button{border:0;border-radius:999px;padding:14px 21px;font-size:.98rem;font-weight:750;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #b8296126}
+.yes{background:linear-gradient(135deg,#ff6598,#e83e7b);color:white}
+.time{background:white;color:var(--deep);border:1px solid #f3b4ca}
+.small{font-size:.8rem;line-height:1.6;color:#8c5c70;margin-top:24px}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@media(max-width:420px){.card{border-radius:24px}.buttons{flex-direction:column}button{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="heart" aria-hidden="true">💗</div>
+<div class="kicker">A little note, just for you</div>
+<h1>Mehwish, may I ask you something?</h1>
+<p>Assalam-o-Alaikum, Mehwish 🌷<br>I wanted to say something honestly and respectfully. I enjoy talking to you, and I’d like the chance to know you a little better—if you feel comfortable with that too.</p>
+<div class="note">“No pressure, no hurry. Your comfort and your answer both matter to me.”</div>
+<p>Would you be open to us getting to know each other a little more?</p>
+<div class="buttons">
+<button class="yes" id="yesBtn">Yes, let's talk 💕</button>
+<button class="time" id="timeBtn">I need a little time 🌸</button>
+</div>
+<p class="small">Whatever your answer is, I’ll respect it. You can also simply tell me what you feel in your own words.</p>
+</main>
+<script>
+const whatsappNumber = "923201365792";
+function reply(message) {
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+document.getElementById("yesBtn").addEventListener("click", () => {
+  reply("Assalam-o-Alaikum Samad 😊 I’m open to getting to know each other a little better. Let’s talk respectfully and take things slowly.");
+});
+document.getElementById("timeBtn").addEventListener("click", () => {
+  reply("Assalam-o-Alaikum Samad 🌸 I’ve read your message. I need a little time to think, and I’ll let you know when I’m ready.");
+});
+</script>
+</body>
+</html>
